@@ -1,9 +1,9 @@
 // populate the default dashboard with an init function
 
-// report = "../data/file.json"
+report = "../data/file.json"
 
 function init() {
-  d3.json("../data/file.json").then((data) => {
+  d3.json(report).then((data) => {
     console.log(data)
     // let samples = data.samples;
 
