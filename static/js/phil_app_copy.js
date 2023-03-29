@@ -1,26 +1,26 @@
 // populate the default dashboard with an init function
 
-report = "../data/file.json"
+report = "../data/2015.csv"
 
 function init() {
-  d3.json(report).then((data) => {
+  d3.csv(report).then((data) => {
     console.log(data)
-    let countries = data.TwentyFifteen[0].country;
+  //   let countries = data.TwentyFifteen[0].country;
 
-      // Add the sample Ids to the dropdown menu
-      let countryIDs = countries.map(x => x.Country)
+  //     // Add the sample Ids to the dropdown menu
+  //     let countryIDs = countries.map(x => x.Country)
 
-      var choices = d3.select("#selDataset");
-      Object.entries(countryIDs).forEach(([k,v]) => {
-      choices.append("option").attr("value", v).text(v)});
+  //     var choices = d3.select("#selDataset");
+  //     Object.entries(countryIDs).forEach(([k,v]) => {
+  //     choices.append("option").attr("value", v).text(v)});
 
-    //   //Use the first sampleId to generate the first charts
+  //   //   //Use the first sampleId to generate the first charts
 
-    // let firstSample = sampleIDs[0];
-    // visualize(firstSample)
-    // describe(firstSample)
+  //   // let firstSample = sampleIDs[0];
+  //   // visualize(firstSample)
+  //   // describe(firstSample)
   }
-)};
+  )};
 
 // // make the charts
 
