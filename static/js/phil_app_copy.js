@@ -5,14 +5,14 @@ report = "../data/file.json"
 function init() {
   d3.json(report).then((data) => {
     console.log(data)
-    // let samples = data.samples;
+    let countries = data.TwentyFifteen[0].country;
 
-    //   // Add the sample Ids to the dropdown menu
-    //   let sampleIDs = samples.map(x => x.id)
+      // Add the sample Ids to the dropdown menu
+      let countryIDs = countries.map(x => x.Country)
 
-    //   var choices = d3.select("#selDataset");
-    //   Object.entries(sampleIDs).forEach(([k,v]) => {
-    //   choices.append("option").attr("value", v).text(v)});
+      var choices = d3.select("#selDataset");
+      Object.entries(countryIDs).forEach(([k,v]) => {
+      choices.append("option").attr("value", v).text(v)});
 
     //   //Use the first sampleId to generate the first charts
 
