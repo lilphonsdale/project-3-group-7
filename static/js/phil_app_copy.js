@@ -1,99 +1,73 @@
 // populate the default dashboard with an init function
 
-report = "../data/2015.csv"
+report = "../alldatawithyrinfo.json"
 
 function init() {
-  d3.csv(report).then((data) => {
+  d3.json(report).then((data) => {
     console.log(data)
-  //   let countries = data.TwentyFifteen[0].country;
 
-  //     // Add the sample Ids to the dropdown menu
-  //     let countryIDs = countries.map(x => x.Country)
+      // Add the country Ids to the dropdown menu
+      let countryIDs = data.map(x => x.Country)
 
-  //     var choices = d3.select("#selDataset");
-  //     Object.entries(countryIDs).forEach(([k,v]) => {
-  //     choices.append("option").attr("value", v).text(v)});
+      var choices = d3.select("#selDataset");
+      Object.entries(countryIDs).forEach(([k,v]) => {
+      choices.append("option").attr("value", v).text(v)});
 
-  //   //   //Use the first sampleId to generate the first charts
+      //Use the first sampleId to generate the first charts
 
-  //   // let firstSample = sampleIDs[0];
-  //   // visualize(firstSample)
-  //   // describe(firstSample)
+    let firstCountry = countryIDs[0];
+    visualize(firstCountry)
   }
   )};
 
-// // make the charts
+// make the charts
 
-// function visualize(sample) {
-//    d3.json(url).then((data) => {
-//     let samples = data.samples;
-//     let sampleofInterest = samples.filter(x => x.id == sample);
-//     let firstSample = sampleofInterest[0]
-//     let otuIds = firstSample.otu_ids
-//     let sampleValues = firstSample.sample_values
-//     let otuLabels =  firstSample.otu_labels
+function visualize(country) {
+   d3.json(report).then((data) => {
+    let countryofInterest = data.filter(x => x.Country == country);
+    console.log(countryofInterest)
+    years = []
+    happinessScore = []
+    for (let i = 0; i < countryofInterest.length; i++) {
+      years.push(countryofInterest[i].Year)
+      happinessScore.push(countryofInterest[i].Score)
+    };
 
-// // create a trace for the bar chart
 
-//       var bar_data = [
-//         {
-//           x: sampleValues.slice(0,10).reverse(),
-//           y: otuIds.slice(0, 10).map(otuIds => `OTU ${otuIds}`).reverse(),
-//           text: otuLabels.slice(0,10).reverse(),
-//           orientation: 'h',
-//           type: "bar",
-//         }]
-//       bar_layout = {
-//           title: "<b>Top 10 OTUs found in the individual<b>",
-//       }
-//     Plotly.newPlot("bar", bar_data, bar_layout);
-    
-// // create a trace for the bubble chart
 
-//     var bubble_data = [
-//       {
-//       x: otuIds,
-//       y: sampleValues,
-//       text: otuLabels,
-//       mode: 'markers',
-//       marker: {
-//         size: sampleValues,
-//         color: otuIds,
-//       }}
-//     ];
 
-//     var bubble_layout = {
-//       title: "<b>Bacteria Cultures Per Sample</b>",
-//       xaxis: {title: "OTU ID"},
-//       hovermode: 'closest'
-//     };
+    // var trace2 = {
+    //   type: "scatter",
+    //   mode: "lines",
+    //   name: 'AAPL High',
+    //   fill: 'tonexty',
+    //   x: frames[5].data[1].x,
+    //   y: frames[5].data[1].y,
+    //   line: {color: 'grey'}
+    // }
+  
+    var trace1 = {
+      type: "scatter",
+      mode: "lines",
+      name: 'Happiness Score',
+      x: years,
+      y: happinessScore,
+      line: {color: 'lightgrey'}
+    }
 
-//     Plotly.newPlot("bubble", bubble_data, bubble_layout);
-//   })
-// }
+    Plotly.newPlot('myDiv', [trace1])
 
-// // Display the sample's metadata/ demographics
+    });
+  // });
+};
 
-// function describe(sample) {
-//   d3.json(url).then((data) => {
-//     let metadata = data.metadata;
-//     let sampleInquestion = metadata.filter(x => x.id == sample);
-//     let theSample = sampleInquestion[0];
-//     let demographics = d3.select("#sample-metadata");
-//     demographics.html("");
-//     Object.entries(theSample).forEach(([k, v]) => {
-//       demographics.append("h6").text(`${k.toUpperCase()}: ${v}`);
-//     });
-// });
-// }
 
 // // A function to update the charts when a selection is made from the dropdown menu
 
-// function optionChanged(newSample) {
-//   visualize(newSample)
-//   describe(newSample);
-// }
+function optionChanged(newSample) {
+  visualize(newSample)
+}
 
 // Run the init function!
 
-init();
+init()
