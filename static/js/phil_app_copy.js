@@ -1,37 +1,121 @@
 // populate the default dashboard with an init function
 
-report = "../data/file.json"
+report = "../alldatawithyrinfo.csv"
 
 function init() {
-  d3.json(report).then((data) => {
+  d3.csv(report).then((data) => {
     console.log(data)
-    let countries = data.TwentyFifteen[0].country;
 
       // Add the sample Ids to the dropdown menu
-      let countryIDs = countries.map(x => x.Country)
+      let countryIDs = data.map(x => x.Country)
 
       var choices = d3.select("#selDataset");
       Object.entries(countryIDs).forEach(([k,v]) => {
       choices.append("option").attr("value", v).text(v)});
 
-    //   //Use the first sampleId to generate the first charts
+      //Use the first sampleId to generate the first charts
 
-    // let firstSample = sampleIDs[0];
-    // visualize(firstSample)
-    // describe(firstSample)
+    let firstCountry = countryIDs[0];
+    visualize(firstCountry)
   }
 )};
 
 // // make the charts
 
-// function visualize(sample) {
-//    d3.json(url).then((data) => {
-//     let samples = data.samples;
-//     let sampleofInterest = samples.filter(x => x.id == sample);
-//     let firstSample = sampleofInterest[0]
-//     let otuIds = firstSample.otu_ids
-//     let sampleValues = firstSample.sample_values
-//     let otuLabels =  firstSample.otu_labels
+function visualize(country) {
+   d3.csv(report).then((data) => {
+    let countryofInterest = data.filter(x => x.country == country);
+    let firstCountry = countryofInterest[0]
+    let score = firstCountry.Score
+    let years = firstCountry.Year
+    // let sampleValues = firstSample.sample_values
+    // let otuLabels =  firstSample.otu_labels
+
+    d3.csv(report, function(err, rows){
+
+    function unpack(rows, key) {
+      return rows.map(function(row) { return row[key]; });
+    }
+    
+      var frames = []
+      var x = unpack(rows, score)
+      var y = unpack(rows, years)
+    
+      var n = 100;
+      for (var i = 0; i < n; i++) {
+        frames[i] = {data: [{x: [], y: []}]}
+        frames[i].data[0].x = x.slice(0, i+1);
+        frames[i].data[0].y = y.slice(0, i+1);
+      }
+    
+      Plotly.newPlot('myDiv', [{
+        x: frames[1].data[0].x,
+        y: frames[1].data[0].y,
+        fill: 'tozeroy',
+        type: 'scatter',
+        mode: 'lines',
+        line: {color: 'green'}
+      }], {
+        title: "Filled-Area Animation",
+        xaxis: {
+          type: 'date',
+          range: [
+            frames[99].data[0].x[0],
+            frames[99].data[0].x[99]
+          ]
+        },
+        yaxis: {
+          range: [
+            0,
+            90
+          ]
+        },
+        updatemenus: [{
+          x: 0.1,
+          y: 0,
+          yanchor: "top",
+          xanchor: "right",
+          showactive: false,
+          direction: "left",
+          type: "buttons",
+          pad: {"t": 87, "r": 10},
+          buttons: [{
+            method: "animate",
+            args: [null, {
+              fromcurrent: true,
+              transition: {
+                duration: 0,
+              },
+              frame: {
+                duration: 40,
+                redraw: false
+              }
+            }],
+            label: "Play"
+          }, {
+            method: "animate",
+            args: [
+              [null],
+              {
+                mode: "immediate",
+                transition: {
+                  duration: 0
+                },
+                frame: {
+                  duration: 0,
+                  redraw: false
+                }
+              }
+            ],
+            label: "Pause"
+          }]
+        }]
+      }).then(function() {
+        Plotly.addFrames('myDiv', frames);
+      });
+    
+    })
+  })};
 
 // // create a trace for the bar chart
 
@@ -48,51 +132,12 @@ function init() {
 //       }
 //     Plotly.newPlot("bar", bar_data, bar_layout);
     
-// // create a trace for the bubble chart
-
-//     var bubble_data = [
-//       {
-//       x: otuIds,
-//       y: sampleValues,
-//       text: otuLabels,
-//       mode: 'markers',
-//       marker: {
-//         size: sampleValues,
-//         color: otuIds,
-//       }}
-//     ];
-
-//     var bubble_layout = {
-//       title: "<b>Bacteria Cultures Per Sample</b>",
-//       xaxis: {title: "OTU ID"},
-//       hovermode: 'closest'
-//     };
-
-//     Plotly.newPlot("bubble", bubble_data, bubble_layout);
-//   })
-// }
-
-// // Display the sample's metadata/ demographics
-
-// function describe(sample) {
-//   d3.json(url).then((data) => {
-//     let metadata = data.metadata;
-//     let sampleInquestion = metadata.filter(x => x.id == sample);
-//     let theSample = sampleInquestion[0];
-//     let demographics = d3.select("#sample-metadata");
-//     demographics.html("");
-//     Object.entries(theSample).forEach(([k, v]) => {
-//       demographics.append("h6").text(`${k.toUpperCase()}: ${v}`);
-//     });
-// });
-// }
 
 // // A function to update the charts when a selection is made from the dropdown menu
 
-// function optionChanged(newSample) {
-//   visualize(newSample)
-//   describe(newSample);
-// }
+function optionChanged(newCountry) {
+  visualize(newCountry);
+}
 
 // Run the init function!
 
