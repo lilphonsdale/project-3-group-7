@@ -100,36 +100,11 @@ function visualize(country) {
 
   var data = [trace1,trace2];
 
-  var selectorOptions = {
-    buttons: [{
-        step: 'month',
-        stepmode: 'backward',
-        count: 1,
-        label: '1m'
-    }, {
-        step: 'month',
-        stepmode: 'backward',
-        count: 6,
-        label: '6m'
-    }, {
-        step: 'year',
-        stepmode: 'todate',
-        count: 1,
-        label: 'YTD'
-    }, {
-        step: 'year',
-        stepmode: 'backward',
-        count: 1,
-        label: '1y'
-    }, {
-        step: 'all',
-    }],
-};
-
   var layout = {
     title: 'Time series with range slider and selectors',
+    width: 1000,
+    height: 1000,
     xaxis: {
-        rangeselector: selectorOptions,
         rangeslider: {}
     },
     yaxis: {
