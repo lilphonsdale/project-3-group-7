@@ -28,23 +28,43 @@ function visualize(country) {
     console.log(countryofInterest)
     years = []
     happinessScore = []
+    family = []
+    freedom = []
+    generosity = []
     for (let i = 0; i < countryofInterest.length; i++) {
       years.push(countryofInterest[i].Year)
       happinessScore.push(countryofInterest[i].Score)
+      family.push(countryofInterest[i].Family)
+      freedom.push(countryofInterest[i].Freedom)
+      generosity.push(countryofInterest[i].Generosity)
     };
 
+    var trace4 = {
+      type: "scatter",
+      mode: "lines",
+      name: 'Generosity',
+      x: years,
+      y: generosity,
+      line: {color: 'blue'}
+    }
 
+    var trace3 = {
+      type: "scatter",
+      mode: "lines",
+      name: 'Freedom',
+      x: years,
+      y: freedom,
+      line: {color: 'red'}
+    }
 
-
-    // var trace2 = {
-    //   type: "scatter",
-    //   mode: "lines",
-    //   name: 'AAPL High',
-    //   fill: 'tonexty',
-    //   x: frames[5].data[1].x,
-    //   y: frames[5].data[1].y,
-    //   line: {color: 'grey'}
-    // }
+    var trace2 = {
+      type: "scatter",
+      mode: "lines",
+      name: 'Family',
+      x: years,
+      y: family,
+      line: {color: 'green'}
+    }
   
     var trace1 = {
       type: "scatter",
@@ -55,7 +75,9 @@ function visualize(country) {
       line: {color: 'lightgrey'}
     }
 
-    Plotly.newPlot('myDiv', [trace1])
+    var traces = [trace1, trace2, trace3, trace4]
+
+    Plotly.newPlot('myDiv', traces)
 
     });
   // });
