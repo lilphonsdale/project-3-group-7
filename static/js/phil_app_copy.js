@@ -9,16 +9,16 @@ function init() {
       // Add the sample Ids to the dropdown menu
       let countryIDs = data.map(x => x.Country)
 
-      var choices = d3.select("#selDataset");
-      Object.entries(countryIDs).forEach(([k,v]) => {
-      choices.append("option").attr("value", v).text(v)});
+  //     var choices = d3.select("#selDataset");
+  //     Object.entries(countryIDs).forEach(([k,v]) => {
+  //     choices.append("option").attr("value", v).text(v)});
 
       //Use the first sampleId to generate the first charts
 
     let firstCountry = countryIDs[0];
     visualize(firstCountry)
   }
-)};
+  )};
 
 // // make the charts
 
