@@ -1,6 +1,6 @@
 // populate the default dashboard with an init function
 
-report = "../alldatawithyrinfo.json"
+report = "../data/alldatawithyrinfo.json"
 
 function init() {
   d3.json(report).then((data) => {
@@ -9,7 +9,7 @@ function init() {
       // Add the country Ids to the dropdown menu
       let countryIDs = data.map(x => x.Country)
 
-      var choices = d3.select("#selDataset");
+      var choices = d3.select("#PhilselDataset");
       Object.entries(countryIDs).forEach(([k,v]) => {
       choices.append("option").attr("value", v).text(v)});
 
@@ -129,7 +129,7 @@ function visualize(country) {
         range: [0,8],
     }
 };
-Plotly.newPlot('slider', traces, layout);
+Plotly.newPlot('Phil', traces, layout);
 })};
 
 // // A function to update the charts when a selection is made from the dropdown menu

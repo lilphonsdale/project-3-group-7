@@ -2,7 +2,7 @@ let selections = {};
 
 function DashBoardInit() {
 
-    d3.json('./data/alldatawithyrinfo.json').then(function (data) {
+    d3.json('../alldatawithyrinfo.json').then(function (data) {
         console.log(data[2]);
 
         let firstdataset = data[0];
