@@ -1,7 +1,7 @@
 // populate the default dashboard with an init function
 
-report = "../alldatawithyrinfo.json"
-// report = "../data/alldatawithyrinfo.json"
+// report = "../alldatawithyrinfo.json"
+report = "../data/alldatawithyrinfo.json"
 
 years = [2015, 2016, 2017, 2018, 2019]
 
