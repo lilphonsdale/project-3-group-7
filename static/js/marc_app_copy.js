@@ -18,9 +18,7 @@ function init() {
         countries_list.push(country);
       }
     };
-    console.log(countries_list)
 
-    
     //append to dropdown
     var choices = d3.select("#selDataset");
     Object.entries(countries_list).forEach(([k,v]) => {
@@ -29,17 +27,14 @@ function init() {
     //Use the first sampleId to generate the first charts
     let firstSample = countries_list[0];
     visualize_pie_chart(firstSample)
-    // describe(firstSample)
   }
 )};
 
 // // make the charts
-
 function visualize_pie_chart(sample) {
    d3.json(report).then((data) => {
 
     let sampleofInterest = data.filter(x => x.Country == sample);
-    console.log(data.filter(x => x.Country == sample));
 
     var DystopiaResidual_list = [];
     var Family_list = [];
@@ -50,7 +45,6 @@ function visualize_pie_chart(sample) {
     var LifeExpectancy_list = [];
 
     // Get Results for specific Country Selected
-  
     for (var i = 0; i < years.length; i++) {
 
       DystopiaResidual_list.push(sampleofInterest[i].DystopiaResidual);
@@ -107,11 +101,9 @@ function visualize_pie_chart(sample) {
   })
 }
 
-
-// // // A function to update the charts when a selection is made from the dropdown menu
-
+// A function to update the charts when a selection is made from the dropdown menu
 function optionChanged(newSample) {
-  visualize(newSample);
+  visualize(newSample)
 };
 
 // Run the init function!
