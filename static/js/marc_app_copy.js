@@ -1,10 +1,9 @@
 // populate the default dashboard with an init function
 
 report = "../alldatawithyrinfo.json"
+// report = "../data/alldatawithyrinfo.json"
 
 years = [2015, 2016, 2017, 2018, 2019]
-// years = [0,1,2,3,4]
-
 
 function init() {
   d3.json(report).then((data) => {
@@ -20,7 +19,7 @@ function init() {
     };
 
     //append to dropdown
-    var choices = d3.select("#selDataset");
+    var choices = d3.select("#MarcselDataset");
     Object.entries(countries_list).forEach(([k,v]) => {
     choices.append("option").attr("value", v).text(v)});
     
@@ -96,14 +95,14 @@ function visualize_pie_chart(sample) {
             y: 0.5
           },]
     };
-    Plotly.newPlot("pie", pie_data, pie_layout);
+    Plotly.newPlot("Marc", pie_data, pie_layout);
     
   })
 }
 
 // A function to update the charts when a selection is made from the dropdown menu
 function optionChanged(newSample) {
-  visualize(newSample)
+  visualize_pie_chart(newSample)
 };
 
 // Run the init function!
