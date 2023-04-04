@@ -1,103 +1,143 @@
-// Identify the source of the data and store it in a variable
-
-const url = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json"
-
-
 // populate the default dashboard with an init function
 
+report = "../data/alldatawithyrinfo.json"
+
 function init() {
-  d3.json("samples.json").then((data) => {
+  d3.json(report).then((data) => {
     console.log(data)
-    let samples = data.samples;
 
-      // Add the sample Ids to the dropdown menu
-      let sampleIDs = samples.map(x => x.id)
+      // Add the country Ids to the dropdown menu
+      let countryIDs = data.map(x => x.Country)
 
-      var choices = d3.select("#selDataset");
-      Object.entries(sampleIDs).forEach(([k,v]) => {
+      var choices = d3.select("#PhilselDataset");
+      Object.entries(countryIDs).forEach(([k,v]) => {
       choices.append("option").attr("value", v).text(v)});
 
-      //Use the first sampleId to generate the first charts
+      //Use the first country to generate the first chart
 
-    let firstSample = sampleIDs[0];
-    visualize(firstSample)
-    describe(firstSample)
+    let firstCountry = countryIDs[0];
+    visualize(firstCountry)
   }
-)};
+  )};
 
-// make the charts
+// make the chart
 
-function visualize(sample) {
-   d3.json(url).then((data) => {
-    let samples = data.samples;
-    let sampleofInterest = samples.filter(x => x.id == sample);
-    let firstSample = sampleofInterest[0]
-    let otuIds = firstSample.otu_ids
-    let sampleValues = firstSample.sample_values
-    let otuLabels =  firstSample.otu_labels
+function visualize(country) {
+   d3.json(report).then((data) => {
+    let countryofInterest = data.filter(x => x.Country == country);
+    console.log(countryofInterest);
+    years = []
+    happinessScore = []
+    family = []
+    freedom = []
+    generosity = []
+    gdp = []
+    trust = []
+    life = []
 
-// create a trace for the bar chart
-
-      var bar_data = [
-        {
-          x: sampleValues.slice(0,10).reverse(),
-          y: otuIds.slice(0, 10).map(otuIds => `OTU ${otuIds}`).reverse(),
-          text: otuLabels.slice(0,10).reverse(),
-          orientation: 'h',
-          type: "bar",
-        }]
-      bar_layout = {
-          title: "<b>Top 10 OTUs found in the individual<b>",
-      }
-    Plotly.newPlot("bar", bar_data, bar_layout);
-    
-// create a trace for the bubble chart
-
-    var bubble_data = [
-      {
-      x: otuIds,
-      y: sampleValues,
-      text: otuLabels,
-      mode: 'markers',
-      marker: {
-        size: sampleValues,
-        color: otuIds,
-      }}
-    ];
-
-    var bubble_layout = {
-      title: "<b>Bacteria Cultures Per Sample</b>",
-      xaxis: {title: "OTU ID"},
-      hovermode: 'closest'
+    for (let i = 0; i < countryofInterest.length; i++) {
+      years.push(countryofInterest[i].Year)
+      happinessScore.push(countryofInterest[i].Score)
+      family.push(countryofInterest[i].Family)
+      freedom.push(countryofInterest[i].Freedom)
+      generosity.push(countryofInterest[i].Generosity)
+      gdp.push(countryofInterest[i].GDP)
+      trust.push(countryofInterest[i].GovernmentTrust)
+      life.push(countryofInterest[i].LifeExpectancy)
     };
 
-    Plotly.newPlot("bubble", bubble_data, bubble_layout);
-  })
-}
+// traces for the lines on the chart
 
-// Display the sample's metadata/ demographics
+  var trace7 = {
+    type: "scatter",
+    mode: "lines",
+    name: 'GDP',
+    x: years,
+    y: gdp,
+    stackgroup: 'one'
+  }
 
-function describe(sample) {
-  d3.json(url).then((data) => {
-    let metadata = data.metadata;
-    let sampleInquestion = metadata.filter(x => x.id == sample);
-    let theSample = sampleInquestion[0];
-    let demographics = d3.select("#sample-metadata");
-    demographics.html("");
-    Object.entries(theSample).forEach(([k, v]) => {
-      demographics.append("h6").text(`${k.toUpperCase()}: ${v}`);
-    });
-});
-}
+  var trace6 = {
+    type: "scatter",
+    mode: "lines",
+    name: 'Government Trust',
+    x: years,
+    y: trust,
+    stackgroup: 'one'
+  }
 
-// A function to update the charts when a selection is made from the dropdown menu
+  var trace5 = {
+    type: "scatter",
+    mode: "lines",
+    name: 'Life Expenctancy',
+    x: years,
+    y: life,
+    stackgroup: 'one'
+  }
 
-function optionChanged(newSample) {
-  visualize(newSample)
-  describe(newSample);
+    var trace4 = {
+      type: "scatter",
+      mode: "lines",
+      name: 'Generosity',
+      x: years,
+      y: generosity,
+      stackgroup: 'one'
+    }
+    
+    var trace3 = {
+      type: "scatter",
+      mode: "lines",
+      name: 'Freedom',
+      x: years,
+      y: freedom,
+      stackgroup: 'one'
+    }
+
+    var trace2 = {
+      type: "scatter",
+      mode: "lines",
+      name: 'Family',
+      x: years,
+      y: family,
+      stackgroup: 'one'
+    }
+  
+    var trace1 = {
+      type: "scatter",
+      mode: "lines",
+      name: 'Happiness Score',
+      x: years,
+      y: happinessScore,
+      fill: 'tozeroy'
+    }
+
+    var traces = [trace1, trace2, trace3, trace4, trace5, trace6, trace7]
+
+// adding a slider
+
+  var layout = {
+    title: 'Time series with range slider',
+    width: 750,
+    height: 500,
+    colorway : ['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462','#b3de69'],
+    xaxis: {
+        rangeslider: {},
+        nticks: 5,
+    },
+    yaxis: {
+        fixedrange: true,
+        range: [0,8],
+    }
+};
+Plotly.newPlot('Phil', traces, layout);
+})};
+
+// // A function to update the charts when a selection is made from the dropdown menu
+
+function optionChanged(newCountry) {
+  visualize(newCountry);
 }
 
 // Run the init function!
 
 init()
-
