@@ -134,7 +134,7 @@ Plotly.newPlot('Phil', traces, layout);
 
 // // A function to update the charts when a selection is made from the dropdown menu
 
-function optionChanged(newCountry) {
+function phil_optionChanged(newCountry) {
   visualize(newCountry);
 }
 

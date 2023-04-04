@@ -2,7 +2,7 @@ let selections = {};
 
 function DashBoardInit() {
 
-    d3.json('../alldatawithyrinfo.json').then(function (data) {
+    d3.json('../data/alldatawithyrinfo.json').then(function (data) {
         console.log(data[2]);
 
         let firstdataset = data[0];
@@ -81,7 +81,7 @@ function optionChanged(param, selected_value) {
     selections[param] = selected_value;
 
     // display results
-    d3.json('./data/alldatawithyrinfo.json').then(function (data) {
+    d3.json('../data/alldatawithyrinfo.json').then(function (data) {
 
         let countryvalues1 = data.filter((x) => x.Country == selections['country1'] && x.Year == selections['year1']);
         let countryvalues2 = data.filter((x) => x.Country == selections['country2'] && x.Year == selections['year2']);

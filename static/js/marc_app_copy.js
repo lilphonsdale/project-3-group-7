@@ -120,7 +120,7 @@ function visualize_pie_chart(sample) {
 }
 
 // A function to update the charts when a selection is made from the dropdown menu
-function optionChanged(newSample) {
+function marc_optionChanged(newSample) {
   visualize_pie_chart(newSample)
 };
 

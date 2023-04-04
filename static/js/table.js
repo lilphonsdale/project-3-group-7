@@ -1,4 +1,4 @@
-d3.json('../alldatawithyrinfo.json',function(data) {
+d3.json('../data/alldatawithyrinfo.json',function(data) {
     // Extract desired columns from data
     console.log(data)
     var columns = ['Rank', 'Country', 'Region', 'Score', 'Year'];
