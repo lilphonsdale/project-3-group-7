@@ -61,7 +61,7 @@ function DashBoardInit() {
             showlegend: true
         }
 
-        Plotly.newPlot("myDiv", dataforplot, layout)
+        Plotly.newPlot("Ezgidiv", dataforplot, layout)
 
         var initial_country = country_names[0];
         selections = {
@@ -128,7 +128,7 @@ function optionChanged(param, selected_value) {
             showlegend: true
         }
 
-        Plotly.newPlot("myDiv", dataforplot, layout)
+        Plotly.newPlot("Ezgidiv", dataforplot, layout)
 
         demo_html = `${selections['country1']} in ${selections['year1']}: ${countryvalues1[0].Rank}<br>${selections['country2']} in ${selections['year2']}: ${countryvalues2[0].Rank}`;
         console.log(demo_html);
