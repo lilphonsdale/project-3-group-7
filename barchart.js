@@ -8,7 +8,7 @@ function init() {
   
   
   
-        var choices = d3.select("#selDataset");
+        var choices = d3.select("#AthiaselDataset");
         Object.entries(regionIDs).forEach(([k,v]) => {
         choices.append("option").attr("value", v).text(v)});
   
@@ -153,7 +153,7 @@ function init() {
           barmode: 'stack',
           title: 'Happiness Scores by Year'};
       
-      Plotly.newPlot('myDiv', data, layout);
+      Plotly.newPlot('Athia', data, layout);
      }});
  /// console.log(health)
 
