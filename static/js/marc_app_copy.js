@@ -42,10 +42,13 @@ function visualize_pie_chart(sample) {
     var Generosity_list = [];
     var GovernmentTrust_list = [];
     var LifeExpectancy_list = [];
+    var Rank_list = [];
+    var Region_list = [];
+    var Score_list = [];
 
     // Get Results for specific Country Selected
     for (var i = 0; i < years.length; i++) {
-
+      //For pie
       DystopiaResidual_list.push(sampleofInterest[i].DystopiaResidual);
       Family_list.push(sampleofInterest[i].Family);
       Freedom_list.push(sampleofInterest[i].Freedom);
@@ -53,10 +56,10 @@ function visualize_pie_chart(sample) {
       Generosity_list.push(sampleofInterest[i].Generosity);
       GovernmentTrust_list.push(sampleofInterest[i].GovernmentTrust);
       LifeExpectancy_list.push(sampleofInterest[i].LifeExpectancy);
-
-      // var Rank_x= sampleofInterest[i].Rank;
-      // var Region_x = sampleofInterest[i].Region;
-      // var Score_x= sampleofInterest[i].Score;
+      //Other Data
+      Rank_list.push(sampleofInterest[i].Rank);
+      Region_list.push(sampleofInterest[i].Region);
+      Score_list.push(sampleofInterest[i].Score);
     };
     
     // Getting Average of each Column
@@ -73,6 +76,21 @@ function visualize_pie_chart(sample) {
       average_results_list.push(avg);
     };
 
+    // Getting Average for information that doesnt make up the Pie chat
+    other_info_list = [Rank_list, Score_list]
+    var average_other_info_list = []
+    
+    for (var z = 0; z < other_info_list.length; z++) {
+      var z_list = other_info_list[z];
+      var total = 0;
+      for(var i = 0; i < z_list.length; i++) {
+          total += z_list[i]
+      };
+      var avg = total / z_list.length;
+      average_other_info_list.push(avg.toFixed(2));
+    };
+
+
 // create a trace for the bar chart
     var pie_data = [{
       values: average_results_list,
@@ -85,15 +103,16 @@ function visualize_pie_chart(sample) {
     }];
 
     pie_layout = {
-        title: "<b> Happiness Score Over Last 5 Years<b>",
+        // title: "<b> Happiness Score Over Last 5 Years<b>",
+        title: "<b> Region:<b>"+ Region_list[0] + "<b>    Average Rank:<b>"+ average_other_info_list[0] + "<b>    Average Score:<b>"+ average_other_info_list[1],
         annotations: [
           {
-            font: {size: 7},
+            font: {size: 15},
             showarrow: false,
-            text: sample + ' Average Scores',
+            text: sample,
             x: 0.5,
             y: 0.5
-          },]
+          },],
     };
     Plotly.newPlot("Marc", pie_data, pie_layout);
     
