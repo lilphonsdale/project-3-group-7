@@ -24,6 +24,8 @@
           <h5>Country:</h5>
           <p> Select a country to see its past 5 years scores</p>
           <select id="PhilselDataset" onchange="optionChanged(this.value)"></select>
+          <p>How does happiness evolve over time?</p>
+          <div id="Phil"></div>
         </div>
         <div class="row">
           <div class="col-md-15">
@@ -48,23 +50,20 @@
         <div class="well">
           <h5>Country:</h5>
           <select id="AthiaselDataset" onchange="optionChanged(this.value)"></select>
+          <div id="Athia"></div>
         </div>
         <div class="well">
           <h5>Country:</h5>
           <select id="MarcselDataset" onchange="optionChanged(this.value)"></select>
+          <div id="Marc"></div>
         </div>
         <div class="well">
           <h5>Country:</h5>
           <select id="YemiselDataset" onchange="optionChanged(this.value)"></select>
+          <div id="Yemi"></div>
         </div>
       </div>
       <div class="col-md-5">
-        <p>How does happiness evolve over time?</p>
-        <div id="Phil"></div>
-
-        <div id="Athia"></div>
-        <div id="Marc"></div>
-        <div id="Yemi"></div>
       </div>
     </div>
   </div>
@@ -72,6 +71,7 @@
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="./static/js/phil_app_copy.js"></script>
+  <script src="./static/js/marc_app_copy.js"></script>
   <script src="readerv2.js"></script>
   <script src="./static/js/table.js"></script>
   <script src="./static/barchart.js"></script>
