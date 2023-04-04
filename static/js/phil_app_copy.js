@@ -117,8 +117,8 @@ function visualize(country) {
 
   var layout = {
     title: 'Time series with range slider',
-    width: 900,
-    height: 900,
+    width: 750,
+    height: 500,
     colorway : ['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462','#b3de69'],
     xaxis: {
         rangeslider: {},
