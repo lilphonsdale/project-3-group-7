@@ -1,4 +1,4 @@
-report = "data/alldatawithyrinfo.json"
+report = '../data/alldatawithyrinfo.json'
 
 function init() {
     d3.json(report).then((data) => {
@@ -14,11 +14,11 @@ function init() {
   
   
       let firstRegion = regionIDs[0];
-      visualize(firstRegion)
+      bar_visualize(firstRegion)
     }
     )};
   
-  function visualize(region) {
+  function bar_visualize(region) {
      d3.json(report).then((data) => {
       let regionofInterest = data.filter(x => x.Region == region);
       console.log(regionofInterest);
@@ -160,10 +160,10 @@ function init() {
     
      };
   
-  function optionChanged(newSample) {
-    visualize(newSample)
+  function athia_optionChanged(newSample) {
+    bar_visualize(newSample)
     console.log(newSample)
-  }
+  };
   
     
   init()
