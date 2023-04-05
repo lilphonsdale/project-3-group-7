@@ -1,4 +1,4 @@
-Country,Region,Rank,Score,GDP per Capita,Family,Life Expectancy,Freedom,Government Trust,Generosity,Dystopia Residual,Year
+Country,Region,Rank,Score,GDP,Family,LifeExpectancy,Freedom,GovernmentTrust,Generosity,DystopiaResidual,Year
 Afghanistan,Southern Asia,153,3.58,0.32,0.3,0.3,0.23,0.1,0.37,1.95,2015
 Albania,Central and Eastern Europe,95,4.96,0.88,0.8,0.81,0.36,0.06,0.14,1.9,2015
 Algeria,Middle East and Northern Africa,68,5.61,0.94,1.08,0.62,0.29,0.17,0.08,2.43,2015
