@@ -1,4 +1,4 @@
-Country,Region,Rank,Score,GDP per Capita,Family,Life Expectancy,Freedom,Government Trust,Generosity,Dystopia Residual,Year
+Country,Region,Rank,Score,GDP,Family,LifeExpectancy,Freedom,GovernmentTrust,Generosity,DystopiaResidual,Year
 Afghanistan,Southern Asia,153,3.58,0.32,0.3,0.3,0.23,0.1,0.37,1.95,2015
 Albania,Central and Eastern Europe,95,4.96,0.88,0.8,0.81,0.36,0.06,0.14,1.9,2015
 Algeria,Middle East and Northern Africa,68,5.61,0.94,1.08,0.62,0.29,0.17,0.08,2.43,2015
@@ -382,13 +382,13 @@ Montenegro,Central and Eastern Europe,83,5.24,1.12,1.24,0.67,0.19,0.2,0.09,1.73,
 Morocco,Middle East and Northern Africa,84,5.24,0.88,0.77,0.6,0.41,0.03,0.09,2.46,2017
 Myanmar,Southeastern Asia,114,4.55,0.37,1.12,0.4,0.51,0.84,0.19,1.12,2017
 Nepal,Western Europe,99,4.96,0.48,1.18,0.5,0.44,0.39,0.07,1.89,2017
-Netherlands,Australia and New Zealand,6,7.38,1.5,1.43,0.81,0.59,0.47,0.28,2.29,2017
-New Zealand,Latin America and Caribbean,8,7.31,1.41,1.55,0.82,0.61,0.5,0.38,2.05,2017
-Nicaragua,Sub-Saharan Africa,43,6.07,0.74,1.29,0.65,0.45,0.3,0.13,2.51,2017
+Netherlands,Western Europe,6,7.38,1.5,1.43,0.81,0.59,0.47,0.28,2.29,2017
+New Zealand,Australia and New Zealand,8,7.31,1.41,1.55,0.82,0.61,0.5,0.38,2.05,2017
+Nicaragua,Latin America and Caribbean,43,6.07,0.74,1.29,0.65,0.45,0.3,0.13,2.51,2017
 Niger,Sub-Saharan Africa,135,4.03,0.16,0.99,0.27,0.36,0.23,0.14,1.87,2017
-Nigeria,Western Europe,95,5.07,0.78,1.22,0.06,0.39,0.23,0.03,2.37,2017
+Nigeria,Sub-Saharan Africa,95,5.07,0.78,1.22,0.06,0.39,0.23,0.03,2.37,2017
 North Cyprus,Western Europe,61,5.81,1.35,1.19,0.83,0.47,0.27,0.16,1.55,2017
-Norway,Middle East and Northern Africa,1,7.54,1.62,1.53,0.8,0.64,0.36,0.32,2.28,2017
+Norway,Western Europe,1,7.54,1.62,1.53,0.8,0.64,0.36,0.32,2.28,2017
 Pakistan,Southern Asia,80,5.27,0.73,0.67,0.4,0.24,0.32,0.12,2.79,2017
 Palestinian Territories,Middle East and Northern Africa,103,4.78,0.72,1.16,0.57,0.25,0.11,0.09,1.88,2017
 Panama,Latin America and Caribbean,30,6.45,1.23,1.37,0.71,0.55,0.21,0.07,2.31,2017
@@ -472,15 +472,15 @@ Croatia,Central and Eastern Europe,82,5.32,1.12,1.16,0.74,0.38,0.04,0.12,1.77,20
 Cyprus,Western Europe,61,5.76,1.23,1.19,0.91,0.42,0.04,0.2,1.77,2018
 Czech Republic,Central and Eastern Europe,21,6.71,1.23,1.49,0.85,0.54,0.03,0.06,2.49,2018
 Denmark,Western Europe,3,7.56,1.35,1.59,0.87,0.68,0.41,0.28,2.37,2018
-Dominican Republic,Sub-Saharan Africa,83,5.3,0.98,1.44,0.61,0.58,0.11,0.12,1.46,2018
+Dominican Republic,Latin America and Caribbean,83,5.3,0.98,1.44,0.61,0.58,0.11,0.12,1.46,2018
 Ecuador,Latin America and Caribbean,48,5.97,0.89,1.33,0.74,0.56,0.12,0.11,2.23,2018
-Egypt,Latin America and Caribbean,122,4.42,0.89,1.03,0.55,0.31,0.11,0.09,1.45,2018
-El Salvador,Middle East and Northern Africa,40,6.17,0.81,1.23,0.64,0.46,0.08,0.07,2.88,2018
-Estonia,Latin America and Caribbean,63,5.74,1.2,1.53,0.74,0.55,0.17,0.09,1.46,2018
-Ethiopia,Central and Eastern Europe,127,4.35,0.31,0.95,0.39,0.45,0.15,0.22,1.88,2018
-Finland,Sub-Saharan Africa,1,7.63,1.31,1.59,0.87,0.68,0.39,0.2,2.59,2018
+Egypt,Middle East and Northern Africa,122,4.42,0.89,1.03,0.55,0.31,0.11,0.09,1.45,2018
+El Salvador,Latin America and Caribbean,40,6.17,0.81,1.23,0.64,0.46,0.08,0.07,2.88,2018
+Estonia,Central and Eastern Europe,63,5.74,1.2,1.53,0.74,0.55,0.17,0.09,1.46,2018
+Ethiopia,Sub-Saharan Africa,127,4.35,0.31,0.95,0.39,0.45,0.15,0.22,1.88,2018
+Finland,Western Europe,1,7.63,1.31,1.59,0.87,0.68,0.39,0.2,2.59,2018
 France,Western Europe,23,6.49,1.29,1.47,0.91,0.52,0.18,0.1,2.03,2018
-Gabon,Western Europe,103,4.76,1.04,1.16,0.4,0.36,0.05,0.03,1.71,2018
+Gabon,Sub-Saharan Africa,103,4.76,1.04,1.16,0.4,0.36,0.05,0.03,1.71,2018
 Georgia,Central and Eastern Europe,128,4.34,0.85,0.59,0.64,0.38,0.22,0.04,1.62,2018
 Germany,Western Europe,15,6.97,1.34,1.47,0.86,0.59,0.28,0.27,2.15,2018
 Ghana,Sub-Saharan Africa,108,4.66,0.59,0.9,0.34,0.5,0.03,0.21,2.09,2018
@@ -514,19 +514,19 @@ Liberia,Sub-Saharan Africa,149,3.5,0.08,0.86,0.27,0.42,0.03,0.21,1.64,2018
 Libya,Middle East and Northern Africa,70,5.57,0.99,1.35,0.55,0.5,0.15,0.12,1.92,2018
 Lithuania,Central and Eastern Europe,50,5.95,1.2,1.53,0.72,0.35,0.01,0.03,2.13,2018
 Luxembourg,Western Europe,17,6.91,1.58,1.52,0.9,0.63,0.32,0.2,1.77,2018
-Madagascar,Central and Eastern Europe,143,3.77,0.26,0.91,0.4,0.22,0.05,0.16,1.78,2018
+Madagascar,Sub-Saharan Africa,143,3.77,0.26,0.91,0.4,0.22,0.05,0.16,1.78,2018
 Malawi,Sub-Saharan Africa,147,3.59,0.19,0.54,0.31,0.53,0.08,0.21,1.73,2018
-Malaysia,Sub-Saharan Africa,35,6.32,1.16,1.26,0.67,0.36,0.06,0.31,2.51,2018
-Mali,Southeastern Asia,118,4.45,0.37,1.23,0.15,0.37,0.06,0.14,2.13,2018
-Malta,Sub-Saharan Africa,22,6.63,1.27,1.53,0.88,0.65,0.14,0.38,1.79,2018
-Mauritania,Western Europe,126,4.36,0.56,1.25,0.29,0.13,0.09,0.13,1.91,2018
+Malaysia,Southeastern Asia,35,6.32,1.16,1.26,0.67,0.36,0.06,0.31,2.51,2018
+Mali,Sub-Saharan Africa,118,4.45,0.37,1.23,0.15,0.37,0.06,0.14,2.13,2018
+Malta,Western Europe,22,6.63,1.27,1.53,0.88,0.65,0.14,0.38,1.79,2018
+Mauritania,Sub-Saharan Africa,126,4.36,0.56,1.25,0.29,0.13,0.09,0.13,1.91,2018
 Mauritius,Sub-Saharan Africa,55,5.89,1.09,1.39,0.68,0.58,0.05,0.25,1.85,2018
-Mexico,Sub-Saharan Africa,24,6.49,1.04,1.25,0.76,0.48,0.1,0.07,2.79,2018
-Moldova,Latin America and Caribbean,67,5.64,0.66,1.3,0.62,0.23,0,0.17,2.66,2018
-Mongolia,Central and Eastern Europe,94,5.13,0.91,1.52,0.58,0.4,0.03,0.25,1.44,2018
-Montenegro,Eastern Asia,81,5.35,1.02,1.28,0.73,0.26,0.08,0.11,1.87,2018
-Morocco,Central and Eastern Europe,85,5.25,0.78,0.8,0.67,0.46,0.07,0.03,2.45,2018
-Myanmar,Sub-Saharan Africa,130,4.31,0.68,1.17,0.43,0.58,0.18,0.6,0.67,2018
+Mexico,Latin America and Caribbean,24,6.49,1.04,1.25,0.76,0.48,0.1,0.07,2.79,2018
+Moldova,Central and Eastern Europe,67,5.64,0.66,1.3,0.62,0.23,0,0.17,2.66,2018
+Mongolia,Eastern Asia,94,5.13,0.91,1.52,0.58,0.4,0.03,0.25,1.44,2018
+Montenegro,Central and Eastern Europe,81,5.35,1.02,1.28,0.73,0.26,0.08,0.11,1.87,2018
+Morocco,Middle East and Northern Africa,85,5.25,0.78,0.8,0.67,0.46,0.07,0.03,2.45,2018
+Myanmar,Southeastern Asia,130,4.31,0.68,1.17,0.43,0.58,0.18,0.6,0.67,2018
 Nepal,Southern Asia,101,4.88,0.43,1.23,0.54,0.53,0.08,0.3,1.78,2018
 Netherlands,Western Europe,6,7.44,1.36,1.49,0.88,0.64,0.3,0.33,2.45,2018
 New Zealand,Australia and New Zealand,8,7.32,1.27,1.6,0.88,0.67,0.39,0.37,2.16,2018
@@ -534,7 +534,7 @@ Nicaragua,Latin America and Caribbean,41,6.14,0.67,1.32,0.7,0.53,0.13,0.21,2.59,
 Niger,Sub-Saharan Africa,134,4.17,0.13,0.87,0.22,0.39,0.1,0.18,2.28,2018
 Nigeria,Sub-Saharan Africa,91,5.16,0.69,1.17,0.05,0.46,0.03,0.2,2.55,2018
 Northern Cyprus,Western Europe,58,5.84,1.23,1.21,0.91,0.5,0.15,0.18,1.66,2018
-Norway,Middle East and Northern Africa,2,7.59,1.46,1.58,0.86,0.69,0.34,0.29,2.38,2018
+Norway,Western Europe,2,7.59,1.46,1.58,0.86,0.69,0.34,0.29,2.38,2018
 Pakistan,Southern Asia,75,5.47,0.65,0.81,0.42,0.33,0.11,0.22,2.92,2018
 Palestinian Territories,Middle East and Northern Africa,104,4.74,0.64,1.22,0.6,0.27,0.08,0.09,1.85,2018
 Panama,Latin America and Caribbean,27,6.43,1.11,1.44,0.76,0.6,0.06,0.13,2.34,2018
@@ -556,9 +556,9 @@ Slovakia,Central and Eastern Europe,39,6.17,1.21,1.54,0.78,0.35,0.01,0.12,2.16,2
 Slovenia,Central and Eastern Europe,51,5.95,1.22,1.51,0.86,0.63,0.05,0.16,1.52,2018
 South Africa,Sub-Saharan Africa,105,4.72,0.94,1.41,0.33,0.52,0.06,0.1,1.37,2018
 South Korea,Eastern Asia,57,5.88,1.27,1.2,0.96,0.24,0.05,0.18,1.98,2018
-Spain,Sub-Saharan Africa,36,6.31,1.25,1.54,0.97,0.45,0.07,0.14,1.89,2018
-Sri Lanka,Western Europe,116,4.47,0.92,1.31,0.67,0.59,0.05,0.31,0.63,2018
-Sudan,Southern Asia,137,4.14,0.61,1.24,0.31,0.02,0.08,0.13,1.75,2018
+Spain,Western Europe,36,6.31,1.25,1.54,0.97,0.45,0.07,0.14,1.89,2018
+Sri Lanka,Southern Asia,116,4.47,0.92,1.31,0.67,0.59,0.05,0.31,0.63,2018
+Sudan,Sub-Saharan Africa,137,4.14,0.61,1.24,0.31,0.02,0.08,0.13,1.75,2018
 Sweden,Western Europe,9,7.31,1.36,1.5,0.91,0.66,0.38,0.29,2.22,2018
 Switzerland,Western Europe,5,7.49,1.42,1.55,0.93,0.66,0.36,0.26,2.32,2018
 Syria,Middle East and Northern Africa,150,3.46,0.69,0.38,0.54,0.09,0.14,0.38,1.24,2018
@@ -622,11 +622,11 @@ Dominican Republic,Sub-Saharan Africa,77,5.43,1.02,1.4,0.78,0.5,0.1,0.11,1.52,20
 Ecuador,Latin America and Caribbean,50,6.03,0.91,1.31,0.87,0.5,0.09,0.13,2.23,2019
 Egypt,Latin America and Caribbean,137,4.17,0.91,1.04,0.64,0.24,0.07,0.08,1.19,2019
 El Salvador,Middle East and Northern Africa,35,6.25,0.79,1.24,0.79,0.43,0.07,0.09,2.83,2019
-Estonia,Latin America and Caribbean,55,5.89,1.24,1.53,0.87,0.5,0.16,0.1,1.5,2019
-Ethiopia,Central and Eastern Europe,134,4.29,0.34,1.03,0.53,0.34,0.1,0.21,1.73,2019
-Finland,Sub-Saharan Africa,1,7.77,1.34,1.59,0.99,0.6,0.39,0.15,2.71,2019
+Estonia,Central and Eastern Europe,55,5.89,1.24,1.53,0.87,0.5,0.16,0.1,1.5,2019
+Ethiopia,Sub-Saharan Africa,134,4.29,0.34,1.03,0.53,0.34,0.1,0.21,1.73,2019
+Finland,Western Europe,1,7.77,1.34,1.59,0.99,0.6,0.39,0.15,2.71,2019
 France,Western Europe,24,6.59,1.32,1.47,1.05,0.44,0.18,0.11,2.02,2019
-Gabon,Western Europe,104,4.8,1.06,1.18,0.57,0.3,0.06,0.04,1.6,2019
+Gabon,Sub-Saharan Africa,104,4.8,1.06,1.18,0.57,0.3,0.06,0.04,1.6,2019
 Georgia,Central and Eastern Europe,119,4.52,0.89,0.67,0.75,0.35,0.16,0.04,1.66,2019
 Germany,Western Europe,17,6.99,1.37,1.45,0.99,0.5,0.27,0.26,2.15,2019
 Ghana,Sub-Saharan Africa,98,5,0.61,0.87,0.49,0.38,0.04,0.25,2.37,2019
@@ -660,18 +660,18 @@ Liberia,Sub-Saharan Africa,141,3.98,0.07,0.92,0.44,0.37,0.03,0.23,1.9,2019
 Libya,Middle East and Northern Africa,72,5.53,1.04,1.3,0.67,0.42,0.15,0.13,1.8,2019
 Lithuania,Central and Eastern Europe,42,6.15,1.24,1.52,0.82,0.29,0.04,0.04,2.2,2019
 Luxembourg,Western Europe,14,7.09,1.61,1.48,1.01,0.53,0.32,0.19,1.95,2019
-Madagascar,Central and Eastern Europe,143,3.93,0.27,0.92,0.56,0.15,0.04,0.17,1.83,2019
+Madagascar,Sub-Saharan Africa,143,3.93,0.27,0.92,0.56,0.15,0.04,0.17,1.83,2019
 Malawi,Sub-Saharan Africa,150,3.41,0.19,0.56,0.5,0.44,0.09,0.22,1.41,2019
-Malaysia,Sub-Saharan Africa,80,5.34,1.22,1.17,0.83,0.51,0.02,0.26,1.33,2019
-Mali,Southeastern Asia,128,4.39,0.39,1.11,0.31,0.33,0.05,0.15,2.06,2019
-Malta,Sub-Saharan Africa,22,6.73,1.3,1.52,1,0.56,0.15,0.38,1.82,2019
-Mauritania,Western Europe,122,4.49,0.57,1.17,0.49,0.07,0.09,0.11,2,2019
+Malaysia,Southeastern Asia,80,5.34,1.22,1.17,0.83,0.51,0.02,0.26,1.33,2019
+Mali,Sub-Saharan Africa,128,4.39,0.39,1.11,0.31,0.33,0.05,0.15,2.06,2019
+Malta,Western Europe,22,6.73,1.3,1.52,1,0.56,0.15,0.38,1.82,2019
+Mauritania,Sub-Saharan Africa,122,4.49,0.57,1.17,0.49,0.07,0.09,0.11,2,2019
 Mauritius,Sub-Saharan Africa,57,5.89,1.12,1.4,0.8,0.5,0.06,0.22,1.8,2019
-Mexico,Sub-Saharan Africa,23,6.6,1.07,1.32,0.86,0.43,0.07,0.07,2.76,2019
-Moldova,Latin America and Caribbean,71,5.53,0.69,1.33,0.74,0.25,0,0.18,2.35,2019
-Mongolia,Central and Eastern Europe,83,5.29,0.95,1.53,0.67,0.32,0.04,0.24,1.55,2019
-Montenegro,Eastern Asia,73,5.52,1.05,1.36,0.87,0.2,0.08,0.14,1.82,2019
-Morocco,Central and Eastern Europe,89,5.21,0.8,0.78,0.78,0.42,0.08,0.04,2.31,2019
+Mexico,Latin America and Caribbean,23,6.6,1.07,1.32,0.86,0.43,0.07,0.07,2.76,2019
+Moldova,Central and Eastern Europe,71,5.53,0.69,1.33,0.74,0.25,0,0.18,2.35,2019
+Mongolia,Eastern Asia,83,5.29,0.95,1.53,0.67,0.32,0.04,0.24,1.55,2019
+Montenegro,Central and Eastern Europe,73,5.52,1.05,1.36,0.87,0.2,0.08,0.14,1.82,2019
+Morocco,Middle East and Northern Africa,89,5.21,0.8,0.78,0.78,0.42,0.08,0.04,2.31,2019
 Myanmar,Sub-Saharan Africa,131,4.36,0.71,1.18,0.56,0.53,0.17,0.57,0.65,2019
 Namibia,Southeastern Asia,113,4.64,0.88,1.31,0.48,0.4,0.06,0.07,1.44,2019
 Nepal,Southern Asia,100,4.91,0.45,1.23,0.68,0.44,0.09,0.29,1.75,2019
@@ -681,7 +681,7 @@ Nicaragua,Latin America and Caribbean,45,6.11,0.69,1.33,0.84,0.44,0.13,0.2,2.49,
 Niger,Sub-Saharan Africa,114,4.63,0.14,0.77,0.37,0.32,0.1,0.19,2.74,2019
 Nigeria,Sub-Saharan Africa,85,5.27,0.7,1.11,0.25,0.43,0.04,0.22,2.53,2019
 Northern Cyprus,Western Europe,64,5.72,1.26,1.25,1.04,0.42,0.16,0.19,1.39,2019
-Norway,Middle East and Northern Africa,3,7.55,1.49,1.58,1.03,0.6,0.34,0.27,2.24,2019
+Norway,Western Europe,3,7.55,1.49,1.58,1.03,0.6,0.34,0.27,2.24,2019
 Pakistan,Southern Asia,67,5.65,0.68,0.89,0.54,0.31,0.1,0.22,2.92,2019
 Palestinian Territories,Middle East and Northern Africa,110,4.7,0.66,1.25,0.67,0.23,0.07,0.1,1.73,2019
 Panama,Latin America and Caribbean,31,6.32,1.15,1.44,0.91,0.52,0.05,0.11,2.14,2019

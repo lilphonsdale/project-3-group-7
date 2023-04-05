@@ -5363,7 +5363,7 @@
  },
  {
    "Country": "Netherlands",
-   "Region": "Western Europe",
+   "Region": "Australia and New Zealand",
    "Rank": 6,
    "Score": 7.38,
    "GDP": 1.5,
@@ -5377,7 +5377,7 @@
  },
  {
    "Country": "New Zealand",
-   "Region": "Australia and New Zealand",
+   "Region": "Latin America and Caribbean",
    "Rank": 8,
    "Score": 7.31,
    "GDP": 1.41,
@@ -5391,7 +5391,7 @@
  },
  {
    "Country": "Nicaragua",
-   "Region": "Latin America and Caribbean",
+   "Region": "Sub-Saharan Africa",
    "Rank": 43,
    "Score": 6.07,
    "GDP": 0.74,
@@ -5419,7 +5419,7 @@
  },
  {
    "Country": "Nigeria",
-   "Region": "Sub-Saharan Africa",
+   "Region": "Western Europe",
    "Rank": 95,
    "Score": 5.07,
    "GDP": 0.78,
@@ -5447,7 +5447,7 @@
  },
  {
    "Country": "Norway",
-   "Region": "Western Europe",
+   "Region": "Middle East and Northern Africa",
    "Rank": 1,
    "Score": 7.54,
    "GDP": 1.62,
@@ -6623,7 +6623,7 @@
  },
  {
    "Country": "Dominican Republic",
-   "Region": "Latin America and Caribbean",
+   "Region": "Sub-Saharan Africa",
    "Rank": 83,
    "Score": 5.3,
    "GDP": 0.98,
@@ -6651,7 +6651,7 @@
  },
  {
    "Country": "Egypt",
-   "Region": "Middle East and Northern Africa",
+   "Region": "Latin America and Caribbean",
    "Rank": 122,
    "Score": 4.42,
    "GDP": 0.89,
@@ -6665,7 +6665,7 @@
  },
  {
    "Country": "El Salvador",
-   "Region": "Latin America and Caribbean",
+   "Region": "Middle East and Northern Africa",
    "Rank": 40,
    "Score": 6.17,
    "GDP": 0.81,
@@ -6679,7 +6679,7 @@
  },
  {
    "Country": "Estonia",
-   "Region": "Central and Eastern Europe",
+   "Region": "Latin America and Caribbean",
    "Rank": 63,
    "Score": 5.74,
    "GDP": 1.2,
@@ -6693,7 +6693,7 @@
  },
  {
    "Country": "Ethiopia",
-   "Region": "Sub-Saharan Africa",
+   "Region": "Central and Eastern Europe",
    "Rank": 127,
    "Score": 4.35,
    "GDP": 0.31,
@@ -6707,7 +6707,7 @@
  },
  {
    "Country": "Finland",
-   "Region": "Western Europe",
+   "Region": "Sub-Saharan Africa",
    "Rank": 1,
    "Score": 7.63,
    "GDP": 1.31,
@@ -6735,7 +6735,7 @@
  },
  {
    "Country": "Gabon",
-   "Region": "Sub-Saharan Africa",
+   "Region": "Western Europe",
    "Rank": 103,
    "Score": 4.76,
    "GDP": 1.04,
@@ -7211,7 +7211,7 @@
  },
  {
    "Country": "Madagascar",
-   "Region": "Sub-Saharan Africa",
+   "Region": "Central and Eastern Europe",
    "Rank": 143,
    "Score": 3.77,
    "GDP": 0.26,
@@ -7239,7 +7239,7 @@
  },
  {
    "Country": "Malaysia",
-   "Region": "Southeastern Asia",
+   "Region": "Sub-Saharan Africa",
    "Rank": 35,
    "Score": 6.32,
    "GDP": 1.16,
@@ -7253,7 +7253,7 @@
  },
  {
    "Country": "Mali",
-   "Region": "Sub-Saharan Africa",
+   "Region": "Southeastern Asia",
    "Rank": 118,
    "Score": 4.45,
    "GDP": 0.37,
@@ -7267,7 +7267,7 @@
  },
  {
    "Country": "Malta",
-   "Region": "Western Europe",
+   "Region": "Sub-Saharan Africa",
    "Rank": 22,
    "Score": 6.63,
    "GDP": 1.27,
@@ -7281,7 +7281,7 @@
  },
  {
    "Country": "Mauritania",
-   "Region": "Sub-Saharan Africa",
+   "Region": "Western Europe",
    "Rank": 126,
    "Score": 4.36,
    "GDP": 0.56,
@@ -7309,7 +7309,7 @@
  },
  {
    "Country": "Mexico",
-   "Region": "Latin America and Caribbean",
+   "Region": "Sub-Saharan Africa",
    "Rank": 24,
    "Score": 6.49,
    "GDP": 1.04,
@@ -7323,7 +7323,7 @@
  },
  {
    "Country": "Moldova",
-   "Region": "Central and Eastern Europe",
+   "Region": "Latin America and Caribbean",
    "Rank": 67,
    "Score": 5.64,
    "GDP": 0.66,
@@ -7337,7 +7337,7 @@
  },
  {
    "Country": "Mongolia",
-   "Region": "Eastern Asia",
+   "Region": "Central and Eastern Europe",
    "Rank": 94,
    "Score": 5.13,
    "GDP": 0.91,
@@ -7351,7 +7351,7 @@
  },
  {
    "Country": "Montenegro",
-   "Region": "Central and Eastern Europe",
+   "Region": "Eastern Asia",
    "Rank": 81,
    "Score": 5.35,
    "GDP": 1.02,
@@ -7365,7 +7365,7 @@
  },
  {
    "Country": "Morocco",
-   "Region": "Middle East and Northern Africa",
+   "Region": "Central and Eastern Europe",
    "Rank": 85,
    "Score": 5.25,
    "GDP": 0.78,
@@ -7379,7 +7379,7 @@
  },
  {
    "Country": "Myanmar",
-   "Region": "Southeastern Asia",
+   "Region": "Sub-Saharan Africa",
    "Rank": 130,
    "Score": 4.31,
    "GDP": 0.68,
@@ -7491,7 +7491,7 @@
  },
  {
    "Country": "Norway",
-   "Region": "Western Europe",
+   "Region": "Middle East and Northern Africa",
    "Rank": 2,
    "Score": 7.59,
    "GDP": 1.46,
@@ -7799,7 +7799,7 @@
  },
  {
    "Country": "Spain",
-   "Region": "Western Europe",
+   "Region": "Sub-Saharan Africa",
    "Rank": 36,
    "Score": 6.31,
    "GDP": 1.25,
@@ -7813,7 +7813,7 @@
  },
  {
    "Country": "Sri Lanka",
-   "Region": "Southern Asia",
+   "Region": "Western Europe",
    "Rank": 116,
    "Score": 4.47,
    "GDP": 0.92,
@@ -7827,7 +7827,7 @@
  },
  {
    "Country": "Sudan",
-   "Region": "Sub-Saharan Africa",
+   "Region": "Southern Asia",
    "Rank": 137,
    "Score": 4.14,
    "GDP": 0.61,
@@ -8723,7 +8723,7 @@
  },
  {
    "Country": "Estonia",
-   "Region": "Central and Eastern Europe",
+   "Region": "Latin America and Caribbean",
    "Rank": 55,
    "Score": 5.89,
    "GDP": 1.24,
@@ -8737,7 +8737,7 @@
  },
  {
    "Country": "Ethiopia",
-   "Region": "Sub-Saharan Africa",
+   "Region": "Central and Eastern Europe",
    "Rank": 134,
    "Score": 4.29,
    "GDP": 0.34,
@@ -8751,7 +8751,7 @@
  },
  {
    "Country": "Finland",
-   "Region": "Western Europe",
+   "Region": "Sub-Saharan Africa",
    "Rank": 1,
    "Score": 7.77,
    "GDP": 1.34,
@@ -8779,7 +8779,7 @@
  },
  {
    "Country": "Gabon",
-   "Region": "Sub-Saharan Africa",
+   "Region": "Western Europe",
    "Rank": 104,
    "Score": 4.8,
    "GDP": 1.06,
@@ -9255,7 +9255,7 @@
  },
  {
    "Country": "Madagascar",
-   "Region": "Sub-Saharan Africa",
+   "Region": "Central and Eastern Europe",
    "Rank": 143,
    "Score": 3.93,
    "GDP": 0.27,
@@ -9283,7 +9283,7 @@
  },
  {
    "Country": "Malaysia",
-   "Region": "Southeastern Asia",
+   "Region": "Sub-Saharan Africa",
    "Rank": 80,
    "Score": 5.34,
    "GDP": 1.22,
@@ -9297,7 +9297,7 @@
  },
  {
    "Country": "Mali",
-   "Region": "Sub-Saharan Africa",
+   "Region": "Southeastern Asia",
    "Rank": 128,
    "Score": 4.39,
    "GDP": 0.39,
@@ -9311,7 +9311,7 @@
  },
  {
    "Country": "Malta",
-   "Region": "Western Europe",
+   "Region": "Sub-Saharan Africa",
    "Rank": 22,
    "Score": 6.73,
    "GDP": 1.3,
@@ -9325,7 +9325,7 @@
  },
  {
    "Country": "Mauritania",
-   "Region": "Sub-Saharan Africa",
+   "Region": "Western Europe",
    "Rank": 122,
    "Score": 4.49,
    "GDP": 0.57,
@@ -9353,7 +9353,7 @@
  },
  {
    "Country": "Mexico",
-   "Region": "Latin America and Caribbean",
+   "Region": "Sub-Saharan Africa",
    "Rank": 23,
    "Score": 6.6,
    "GDP": 1.07,
@@ -9367,7 +9367,7 @@
  },
  {
    "Country": "Moldova",
-   "Region": "Central and Eastern Europe",
+   "Region": "Latin America and Caribbean",
    "Rank": 71,
    "Score": 5.53,
    "GDP": 0.69,
@@ -9381,7 +9381,7 @@
  },
  {
    "Country": "Mongolia",
-   "Region": "Eastern Asia",
+   "Region": "Central and Eastern Europe",
    "Rank": 83,
    "Score": 5.29,
    "GDP": 0.95,
@@ -9395,7 +9395,7 @@
  },
  {
    "Country": "Montenegro",
-   "Region": "Central and Eastern Europe",
+   "Region": "Eastern Asia",
    "Rank": 73,
    "Score": 5.52,
    "GDP": 1.05,
@@ -9409,7 +9409,7 @@
  },
  {
    "Country": "Morocco",
-   "Region": "Middle East and Northern Africa",
+   "Region": "Central and Eastern Europe",
    "Rank": 89,
    "Score": 5.21,
    "GDP": 0.8,
@@ -9549,7 +9549,7 @@
  },
  {
    "Country": "Norway",
-   "Region": "Western Europe",
+   "Region": "Middle East and Northern Africa",
    "Rank": 3,
    "Score": 7.55,
    "GDP": 1.49,
