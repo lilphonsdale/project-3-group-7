@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<style>
+  .row {
+    background-color: darkgoldenrod;
+  }
+  body {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,33 +20,33 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
-<body>
-
+<body background="happy4.jpg" background-repeat=”no-repeat” background-size=”cover”>
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
-        <h1>The World Happiness Report</h1>
-        <p>2015-2019 survey results</p>
+        <h1 style="color: darkgoldenrod">The World Happiness Report</h1>
+        <p style="color: darkgoldenrod; font-weight: 100; font-style: italic">2015-2019 survey results</p>
       </div>
     </div>
+  <div class="bgimage"></div>
     <div class="row">
       <div class="col-md-12">
         <div class="well">
-          <h5>Country:</h5>
+          <h5>Select Year:</h5>
           <select id="YemiselDataset" onchange="yemi_optionChanged(this.value)"></select>
           <div id="Yemi"></div>
         </div>
         <div class="well">
-          <h5>Region:</h5>
+          <h5>Select Region:</h5>
           <select id="AthiaselDataset" onchange="athia_optionChanged(this.value)"></select>
           <div id="Athia"></div>
         </div>
         <div class="well">
-          <h5>Select First Country:</h5>
+          <h5>Select First Country to Compare:</h5>
           <select id="country1" onchange="optionChanged(this.id, this.value)"></select>
           <h5>Select Year:</h5>
           <select id="year1" onchange="optionChanged(this.id, this.value)"></select>
-          <h5>Select Second Country:</h5>
+          <h5>Select Second Country to Compare:</h5>
           <select id="country2" onchange="optionChanged(this.id, this.value)"></select>
           <h5>Select Year:</h5>
           <select id="year2" onchange="optionChanged(this.id, this.value)"></select>
@@ -54,7 +65,7 @@
         <div id="Phil"></div>
       </div>
       <div class="well">
-        <h5>Country:</h5>
+        <h5>Select Country:</h5>
         <select id="MarcselDataset" onchange="marc_optionChanged(this.value)"></select>
         <div id="Marc"></div>
       </div>
