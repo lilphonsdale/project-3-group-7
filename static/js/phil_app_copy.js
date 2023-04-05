@@ -6,8 +6,14 @@ function init() {
   d3.json(report).then((data) => {
     console.log(data)
 
-      // Add the country Ids to the dropdown menu
-      let countryIDs = data.map(x => x.Country)
+    // Get Countries
+    var countryIDs = []
+    for (var i = 0; i < data.length; i++) {
+      var country = data[i].Country
+      if (countryIDs.includes(country) == false){
+        countryIDs.push(country);
+      }
+    };
 
       var choices = d3.select("#PhilselDataset");
       Object.entries(countryIDs).forEach(([k,v]) => {
