@@ -5,11 +5,11 @@ function init() {
       console.log(data)
 
       let regionIDs = data.map(x => x.Region)
-  
+      let regionIDsdestinct = [...new Set(regionIDs)]
   
   
         var choices = d3.select("#AthiaselDataset");
-        Object.entries(regionIDs).forEach(([k,v]) => {
+        Object.entries(regionIDsdestinct).forEach(([k,v]) => {
         choices.append("option").attr("value", v).text(v)});
   
   
@@ -130,14 +130,8 @@ function init() {
           y: economy,
         };
     
-        var trace6 = {
-          type: "bar",
-          name: "Dystopia Residual",
-          x: years,
-          y: dystopiaResidual
-        };
     
-        var trace7 = {
+        var trace6 = {
           type: "bar",
           name: "Trust",
           x: years,
@@ -145,13 +139,14 @@ function init() {
         };
       
       
-        var data = [trace1,trace2,trace3,trace4,trace5,trace6,trace7];
+        var data = [trace1,trace2,trace3,trace4,trace5,trace6];
       
         var layout = {
           xaxis: {title: 'Years'},
           yaxis: {title: 'Factors'},
           barmode: 'stack',
-          title: 'Happiness Scores by Year'};
+          title: 'Happiness Scores by Year',
+          colorway : ['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462','#b3de69']        };
       
       Plotly.newPlot('Athia', data, layout);
      }});
