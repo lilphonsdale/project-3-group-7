@@ -1,6 +1,8 @@
 // console.log("hello world")
 report = "../data/alldatawithyrinfo.json"
 
+sel_year = ""
+sel_country = ""
 
 function init(){
     d3.json(report).then(function(data) {
@@ -15,6 +17,18 @@ function init(){
             drop_menu.append("option").text(years);
         });
 
+
+        let country_names = [''];
+        for (let i = 0; i < 146; i++) {
+            // Variable to hold current movie in loop
+            country_names.push(data[i].Country);
+        }
+        let drop_menu_2 = d3.select("#YemiselCountry");
+        country_names.forEach(function (country_names) {
+            drop_menu_2.append("option").text(country_names);
+        });
+
+
         printTable()
     
     });
@@ -24,6 +38,9 @@ function init(){
 init()
 
 function printTable(){
+    if(sel_year != ""){
+        yemi_optionChanged(sel_year);
+    }
     d3.json(report).then(function(data) {
         var columns = ['Rank', 'Country', 'Region', 'Score', 'Year'];
         var tableData = data.map(function(d) {
@@ -64,7 +81,7 @@ function printTable(){
             cells: {
             values: Object.values(transposedData),
             align: 'center',
-            line: {width: 1, color: 'black'},
+            line: {width: 1, color: '#808080'},
             fill: {color: "white"},
             font: {family: "verdana, arial, sans-serif", size: 12, color: "#444444"},
             // columnwidth: 300
@@ -75,23 +92,32 @@ function printTable(){
 
 };
 
+
 function yemi_optionChanged(selected_value){
+    sel_year = selected_value
+
+    if(sel_country != '' && selected_value == ""){
+        yemi_countryProbe(sel_country);
+        return;
+
+    }
+    
     if(selected_value == ""){
         printTable()
         return
     }
 
+    if(sel_country != ''){
+        yemi_countryProbe(sel_country);
+        return;
+
+    }
+
+    
+
     d3.json(report).then(function(data) {
         var columns = ['Rank', 'Country', 'Region', 'Score', 'Year'];
-        var tableData = data.map(function(d) {
-            return {
-            Rank: d.Rank,
-            Country: d.Country,
-            Region: d.Region,
-            Score: d.Score,
-            Year: d.Year
-            };
-        });
+    
 
         var filteredData = data.filter(function(d) {
             return d.Year == selected_value;
@@ -108,6 +134,70 @@ function yemi_optionChanged(selected_value){
         filteredTableData.sort(function(a, b) {
             return a.Rank - b.Rank;
         });
+    
+        // Transpose filtered data to display rows as columns
+        var transposedFilteredData = {};
+        columns.forEach(function(column) {
+            transposedFilteredData[column] = filteredTableData.map(function(d) {
+                return d[column];
+            });
+        });
+
+        Plotly.update('Yemi', {
+            cells: {
+                values: Object.values(transposedFilteredData)
+            }
+        });
+    
+    });
+}
+
+
+function yemi_countryProbe(selected_country){
+    // drop_menu.select('option').text('')
+    
+    sel_country = selected_country;
+    // console.log(sel_year);
+    // console.log(sel_country);
+
+    if(selected_country == "" && sel_year == ""){
+        printTable();
+        return;
+    } else if(selected_country == ''){
+        yemi_optionChanged(sel_year);
+        return;
+
+    }
+    d3.json(report).then(function(data) {
+        var columns = ['Rank', 'Country', 'Region', 'Score', 'Year'];
+        var tableData = data.map(function(d) {
+            return {
+            Rank: d.Rank,
+            Country: d.Country,
+            Region: d.Region,
+            Score: d.Score,
+            Year: d.Year
+            };
+        });
+
+        var filteredData = data.filter(function(d) {
+            if(sel_year == ""){
+                return d.Country == selected_country;
+            } else {
+                return d.Country == selected_country && d.Year == sel_year;
+            }
+            // return d.Country == selected_country;
+        });
+        var filteredTableData = filteredData.map(function(d) {
+        return {
+            Rank: d.Rank,
+            Country: d.Country,
+            Region: d.Region,
+            Score: d.Score,
+            Year: d.Year
+        };
+        });
+
     
         // Transpose filtered data to display rows as columns
         var transposedFilteredData = {};
