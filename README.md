@@ -1,4 +1,4 @@
-# project-3-group-7
+# World Happiness Report
 
 # Background
 Our group decided to look at the World Happiness Report dataset, a set of survey responses. Respondents are asked to rank their happiness from 0-10, with 10 being the happiest. The average of each country was taken. Experts then estimated how factors like economic performance, health care, family culture and quality of governance contributed to the national average. 
